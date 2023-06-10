@@ -9,13 +9,13 @@ sudo make install
 
 ## Some terminal stuff
 echo "Installing Zsh"
-sudo apt install -y allacritty zsh tmux
+sudo apt install -y alacritty zsh tmux
 sudo chsh -s /usr/bin/zsh
 
-eval "$(starship init bash)"
-
 ## Install some rust stuff
-sudo apt install cargo
+sudo apt install -y cargo
 cargo install bat
 cargo install ripgrep
 cargo install fd-find
+
+
