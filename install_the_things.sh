@@ -1,4 +1,8 @@
 #!/usr/bin/bash
+# Updates the things
+sudo apt update
+sudo apt upgrade -y
+
 
 ## Install neovim
 echo "Installing Neovim"
@@ -14,14 +18,20 @@ git clone --depth 1 https://github.com/wbthomason/packer.nvim\
 
 cd - 
 cp -r nvim ~/.config/nvim
+nvim --headless \
+     -c "source ~/.config/nvim/lua/plemeur/packer.lua" \
+     -c "PackerSync" \
+     -c "quitall" 
 
-nvim --headless -c "PackerSync"
 
-
-## Some terminal stuff
+## Terminal stuff 
 echo "Installing Zsh"
 sudo apt install -y alacritty zsh tmux
 sudo chsh -s /usr/bin/zsh $USER
+curl -sS https://starship.rs/install.sh | sh
+cp zshrc ~/.zshrc
+
+
 
 ## Install some rust stuff
 sudo apt install -y cargo
