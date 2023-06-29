@@ -30,8 +30,8 @@ sudo apt install -y alacritty zsh tmux
 sudo chsh -s /usr/bin/zsh $USER
 curl -sS https://starship.rs/install.sh | sh
 cp zshrc ~/.zshrc
-
-
+cp starship.toml ~/.config/starship.toml
+cp tmux.conf ~/.tmux.conf
 
 ## Install some rust stuff
 sudo apt install -y cargo

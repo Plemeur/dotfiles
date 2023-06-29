@@ -1,0 +1,14 @@
+add_newline = false
+
+[line_break]
+disabled = true
+
+[directory]
+truncation_length = 2
+truncation_symbol = '../'
+
+[python]
+format = 'via [${symbol}(${version} )]($style)'
+
+[package]
+format = ''
