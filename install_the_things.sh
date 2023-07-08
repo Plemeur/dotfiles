@@ -38,6 +38,6 @@ sudo apt install -y cargo
 cargo install bat
 cargo install ripgrep
 cargo install fd-find
-
+cargo install exa
 
 
